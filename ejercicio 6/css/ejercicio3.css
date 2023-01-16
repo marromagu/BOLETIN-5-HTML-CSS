@@ -1,0 +1,29 @@
+/*Estilo general del body*/
+body {
+	border: 1px solid red;
+	margin: 15%;
+	/*simplemente para Centrar la página resultante del ejercicio 3 tanto vertical como horizontalmente en la ventana del
+	navegador ajustamos el margin con % y siempre estara centrada*/
+}
+
+/*Estilo primer párrafo*/
+.margen {
+	margin-top: 2em;
+	margin-right: 2em;
+	margin-bottom: 2em;
+	margin-left: 2em;
+	border: 1px solid #000;
+	background-color: olive;
+	text-align: justify;
+}
+
+/*estilo segundo párrafo*/
+.relleno {
+	padding-top: 2em;
+	padding-right: 2em;
+	padding-bottom: 2em;
+	padding-left: 2em;
+	border: 1px solid #000;
+	background-color: orange;
+	text-align: justify;
+}

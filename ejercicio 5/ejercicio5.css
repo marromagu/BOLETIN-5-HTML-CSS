@@ -1,0 +1,44 @@
+body {
+    background-color: burlywood;
+}
+
+#contenedor {
+    background-color: burlywood;
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: grey;
+    font-family: Arial, sans-serif;
+
+}
+
+#contenido {
+    background-color: burlywood;
+}
+
+p::first-letter {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(223, 136, 22);
+    font-size: 40px;
+    float: left;
+}
+
+p {
+    background-color: rgb(235, 179, 107);
+    border-style: dotted;
+    border-color: rgb(241, 159, 50);
+    text-align: justify;
+    clear: right;
+    float: left;
+    margin: 50px;
+    border: 5px, solid;
+    padding: 15px;
+    width: 200px;
+    height: 200px;
+
+
+}

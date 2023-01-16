@@ -1,0 +1,83 @@
+@charset "UTF-8";
+/* Estilo tabla, filas, encabezados, celdas*/
+table, tr, th, td {
+	border:1px solid #000;
+	border-collapse:collapse; /*si no se configura aparece borde en cada celda y borde en toda la tabla*/
+    padding:5px;
+	} 
+
+/* el id titulo se puede expresar también como h1#titulo*/
+#titulo {
+	color: teal;
+	}
+
+/*Los strong en color rojo*/	
+strong { color: red; } 
+
+/*selector de clase destacado*/
+span.destacado {
+	color: orange; 
+	}
+
+/* h2 con id subtitulo,sería equivalente a h2, puesto que solo hay 1 h2*/	
+h2#subtitulo {
+	color: blue;
+	} 
+
+/* span clase especial*/
+span.especial {
+	color: purple; 
+	}
+
+/*	Los a en color rojo*/
+a { 
+	color: red; 
+	} 
+	
+/*los em descendientes de a*, hay que ponerlo después del genérico anterior*/
+a em { 
+	color: blue; 
+	} 
+
+/* párrafos descendientes del div con id adicional, es el último bloque de texto*/
+div#adicional p {
+	color: olive; 
+	} 
+	
+/*Este es el span con id especial*/
+#especial { 
+	color: fuchsia;
+	} 
+	
+/*Los a descendientes del div con id adicional*/
+div#adicional a { 
+	color: green; 
+	}
+	
+/*Tabla*/
+/*Título de la tabla */	
+caption { 
+	color: blue; 
+	} 
+	
+/* Todos los td en color verde */
+td { 
+	color: green; 
+	}
+
+/*Los strong descendientes de td en color naranja*/	
+td strong {
+	color: orange; 
+	}
+
+/* th en color rojo*/	
+th { 
+	color: red; 
+	}
+
+/*th clase especial en color naranja*/	
+th.especial { 
+	color: orange; 
+	}
+
+

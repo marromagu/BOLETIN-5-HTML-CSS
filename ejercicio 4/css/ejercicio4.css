@@ -1,0 +1,178 @@
+/*Formato general del body*/
+
+body { 
+  background-color:#C5DABA; 
+  font-family: sans-serif; 
+  text-align: justify; 
+  margin: 5em 0.5em; /*5em sup,inf. 0.5 izq,der*/
+  border:red 1px solid; 
+  /*position: relative;*/
+}
+
+/*Formato h1*/
+h1 { 
+  color: #A0A0A0;
+  text-align: center; 
+  text-transform: uppercase;
+  margin: 1em 5em; /*sup, inf 1em. Izq,der, 5em*/
+  border:blue 1px solid; 
+}
+
+/*Formato general párrafos*/
+p { 
+  background-color: #E2D0AB; 
+  border: #E9A568 2px dashed; 
+  font-style: oblique;
+  height: 8em; 
+  margin: 20px 3em; 
+ /* overflow: auto; */
+  padding: 10px; 
+  /*width: 13em; */
+}
+
+
+/*Posicionamiento*/
+/*------------------------*/
+
+/*Posicionamiento absoluto relativo*/
+/*---------------------------------------------------*/
+/*en párrafo id=posrel1 se desplaza el párrafo 20 pixels hacia abajo.*/
+p#posrel1 {
+  position: relative; 
+  top: 20px;   /*bottom:-20px;*/
+  
+}
+
+/*en párrafo id=posrel2 se desplaza el párrafo 10 pixels hacia arriba.*/
+p#posrel2 {
+  position: relative; 
+  top: -10px;
+}
+
+/*en párrafo id=posrel3 se desplaza el párrafo 20 pixels hacia abajo.*/
+p#posrel3 {
+  position: relative; 
+  bottom: -20px;/*Como se desplaza hacia abajo sería negativo*/
+}
+
+/*en párrafo id=posrel4 se desplaza el párrafo 10 pixels hacia arriba.*/
+p#posrel4 {
+  position: relative; 
+  bottom: 10px; /*se desplaza hacia arriba, positivo*/
+}
+
+/*desplazamiento a la derecha desde su borde izquierdo id=despder 20 pixels.*/
+p#despder { 
+  background-color: white;  /* se configura otros atributos para distingirlo*/
+  border: black 1px solid; 
+  position: relative; 
+  left: 20px;
+}
+
+/*desplazamiento a la izqda desde su borde izquierdo id=despizqda 40 pixels.*/
+p#despizqda { 
+  background-color: green; 
+  border: black 1px solid; 
+  position: relative; 
+  left: -40px;
+}
+
+/*desplazamiento a la derecha desde su borde derecho id=despder1 20 pixels.*/
+p#despder1 { 
+  background-color: white; 
+  border: black 1px solid; 
+  position: relative; 
+  right: -20px; /*Es equivalente al despder*/
+}
+
+/*desplazamiento a la izqda desde su borde derecho id=despizqda1 10 pixels.*/
+p#despizqda1 { 
+  background-color: green; 
+  border: black 1px solid; 
+  position: relative; 
+  right: 10px;
+}
+
+/*Posicionamiento absoluto fijo*/
+/*-------------------------------------------*/
+
+/* Se configura el div cabecera con posicionamiento fijo*/
+div#cabecera { 
+  background-color: gray; 
+  border: blue 1px solid;
+  /*height: 1.8em; */
+  left: 0px; /*se desplaza 0px desde la izq, es decir se situa a la iz.*/
+  position: fixed; 
+  top: 0px; /*se desaplaza 0px desde el lado sup.*/
+  width: 100%;
+  z-index:1;/*Se pone encima de otros */
+}
+
+/*Estilo de lista*/
+div#cabecera ul { 
+  list-style-type: none; 
+  margin: 0.2em 0;  /*margenes sup,inf, izq,der*/
+}
+
+/*Estilo de cada elemento de la lista*/
+div#cabecera li {
+  /*border: #BBBBBB 2px solid;*/
+  float:left; /*Se ponen uno a continuación del otro*/
+  margin-right:  0.6em;
+}
+
+/*Posicionamiento absoluto absoluto*/
+/*-------------------------------------
+/*Mostrar la cita “Cualquiera puede hacer una cosa, el mérito está en hacer creer al mundo que
+uno lo ha hecho”, en una posición con posicionamiento absoluto.*/
+p#posabs { 
+  background-color: red; /* Se da formato al párrafo para identificarlo*/
+  border: green 5px solid; 
+  position: absolute; 
+  right: 100px; /* Estará a 100px de la derecha*/
+  height:15%;
+  width:15%;
+  bottom:50px; /*Estará a 800px desde el borde inferior*/
+}
+
+/*Pseudo-clase en letra capital*/
+p:first-letter { 
+  color: #C9A568; 
+  float: left; /*Al ponerlo float left, el resto del párrafo "fluye" alrededor*/
+  font-size: 300%; 
+  font-style: normal;/*estilo de letra  normal | italic | oblique | inherit */
+
+}
+
+
+/*Ejemplo float en imágenes*/
+/*----------------------------------------*/
+
+/*Formato general de las imágenes*/
+
+img {
+	height:70%; /*La algura de la imagen será el 70% del elemento en el que está (párrafo)*/
+	width:7%;
+        padding:10px;
+     }
+	 
+	 /*Las imágenes sol y moda se configuran con float left*/
+img#sol,img#moda {
+	float:left;
+}
+
+/*La imagen luna se configura con float right*/
+img#luna {
+	float:right;
+}
+
+/*Aplicar a los párrafos con ip=”desplazado” posicionamiento flotante.*/
+p.desplazado {
+	float:left;
+    width:30%;
+	/*margin:1em;*/
+	}
+
+
+
+

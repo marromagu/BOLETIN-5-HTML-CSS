@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+/*Estilo general de la fuente en todo el documento*/
+* {
+		font: 1em/1.3 Arial, Helvetica, sans-serif;
+	}
+
+/*Color general de todos los párrafos*/
+p { 
+		color: #555; /*Un tono de gris*/
+	} 
+
+/*Color de párrafos descendientes del div primero, sería el primer párrafo */
+#primero p { 
+		color: #336699; /*Tono azulado*/
+	} 
+	
+	/*Enlaces, color rojizo*/
+a {
+		color: #CC3300;
+	} 
+
+/* Los em descendientes del párrafo primero*/
+#primero em { 
+		background: #FFFFCC; 
+		padding: .1em; 
+	} 
+
+/*Clase especial, resto em*/
+.especial {
+		background: #FFCC99;
+		border: 1px solid #FF9900;
+		padding: .1em;
+	} 
+
+/* span descendientes de div clase normal*/
+.normal span {
+		font-weight: bold;/*grosor fuente similar a 700*/
+	} 
