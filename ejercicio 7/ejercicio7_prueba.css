@@ -2,133 +2,172 @@ body {
     background-image: url(imagenes/fondo.gif);
     background-size: contain;
 }
-
-#contenedor {
-    border: solid;
-    border-color: red;
-    margin: 2% 5%;
+/*PASO 1: Estilos básicos:
+▪ Márgenes y rellenos a cero de listas y elementos de lista. Eliminar la viñeta de la misma.
+▪ Márgenes y rellenos a cero de h1, h2, h3, p, form
+▪ Los elementos de clase clear que se usen para poner la propiedad clear a both. La
+propiedad clear indica el lado del elemento HTML que no debe ser adyacente a ninguna
+caja posicionada de forma flotante. El valor both despeja los lados izquierdo y derecho del
+elemento, ya que desplaza el elemento de forma descendente hasta que el borde superior
+se encuentre por debajo del borde inferior de cualquier elemento flotante hacia la izquierda
+o hacia la derecha. 
+▪ No poner borde a las imágenes*/
+ul {
+    list-style: none;
 }
 
-#cabecera {
+.clear {
+    clear: both;
+}
+
+
+
+/*PASO 2: Dimensionar y posicionar las capas:
+▪ Borde a las áreas principales color #777
+▪ #contenedor: ancho que ocupe el 90% de la página, ancho máximo 900 px, margen auto
+izqdo y derecho. Borde rojo (sólo para comprobar que la página está centrada
+horizontalmente cuando el diseño esté terminado eliminarlo).
+▪ Para cabecera poner logo lo más pegado a la izqda y buscador a la derecha.
+▪ #lateral lo más pegado a la izqda , ancho del 20% de su contenedor
+▪ #contenido lo más pegado a la derecha , ancho del 78% de su contenedor
+▪ #contenido #principal lo más pegado a la izqda , ancho del 78% de su contenedor
+▪ #contenido #secundario lo más pegado a la derecha , ancho del 20% de su contenedor
+▪ clear en cabecera, menu y pie
+▪ Hacer que el texto fluye alrededor de las imágenes. Las dimensiones pueden darse en html
+(sería lo más eficiente) o en CSS.
+▪ Dentro del pie situar los enlaces a la iqzda y el copyright a la derecha*/
+#contenedor {
+    width: 90%;
+    margin: auto;
+    border: solid;
+    border-color: red;
+}
+#cabecera{
     background-image: url(imagenes/ciudad.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 70px;
-    padding: 1%;
-    border: solid;
-    border-color: gray;
+    padding: 1em;
 }
 
 #logo {
     color: #ffffff;
-    font-weight: bold;
-    font-family: 'Courier New', Courier, monospace;
     float: left;
+    margin: 1px 10px;
 }
 
 #buscador {
     color: #ffffff;
     text-align: right;
     float: right;
-
+    margin: 1px 10px;
 }
-
-#menu {
+/*PASO 3: Menú:
+▪ El menu lo visualizamos como un bloque, cada opción será un cuadrado en linea, a los
+hipervinculosle quitaremos los subrayados PASO 4: Márgenes y rellenos*/
+#menu{
     border: solid;
-    border-color: grey;
-
+    border-color: #777;
+    padding: 0.5em;
+    margin-bottom: 0.5em;
 }
-
-#menu_principal {
-    list-style: none;
-    display: flex;
-
-}
-
-li {
-    margin-left: 6%;
-}
-
-#menu a {
+#menu a{
     color: orange;
     text-decoration: none;
+}
 
+#menu_principal{
+    display: flex;
+}
+#menu_principal li{
+    margin: auto;
 }
 
 #lateral {
-
-    float: left;
     border: solid;
-    border-color: grey;
-    width: min-content;
-    margin-top: 5px;
-    margin-right: 10px;
+    border-color: #777;
+    width: 20%;
+    float: left;
 }
+/*********************************************************/
+#noticias{
+    margin: 0.5em;
+    background-image: url(imagenes/fnoticias.gif);
+    background-repeat: no-repeat;
+    background-position: unset;
 
-h3 {
+}
+#publicidad{
+    margin-top: 1em;
+    background-image: url(imagenes/fnoticias.gif);
+    background-repeat: no-repeat;
+}
+h3{
     text-align: center;
     font-weight: bold;
     font-size: 30px;
     background-image: url(imagenes/ftitulos.gif);
     padding: 5px;
+    margin: 10px;
 }
-
-ul {
-    list-style: none;
-}
-
-#principal {
-    text-align: justify;
-    border: solid;
-    width: 72%;
+/*********************************************************/
+#contenido{
+    text-align: left;
+    width: 78%;
     float: left;
-    margin-top: 5px;
-    margin-right: 10px;
-    border-color: gray;
 }
-
-#secundario {
-    text-align: justify;
-    border: solid;
-    border-color: grey;
-    width: 10%;
+#principal{
+    margin: 0.5em;
+    width: 78%;
     float: left;
-    margin-top: 5px;
+    border: solid;
+    border-color: #777;
+}
+#secundario{
+    margin: 0.5em;
+    text-align: right;
+    width: 15%;
+    float: right;
+    border: solid;
+    border-color: #777;
+}
+.articulo{
+    margin: 1em;
+}
+img{
+    margin: 0.5em;
+    width: 100px;
+    height: 50px;
+    float: left;
+    
+}
+#pie{
+    margin: 1em;
+    background-color: khaki;
+    text-align: center;
 
 }
-
-h2 {
+#principal h2{
+    color: brown;
+    background-color: rgb(208, 244, 245);
+}
+#secundario h2{
     color: #ffffff;
     text-decoration: underline;
 }
-
-#pie {
-    background-color: khaki;
-    text-align: center;
-    clear: both;
-
+/*Paso 4: Márgenes y relleno.
+▪ El elemento #cabecera debe tener un relleno de 1em en todos los lados.
+▪ El elemento #menu debe tener un relleno de 0.5em en todos los lados y un margen inferior
+de 0.5em.
+▪ El resto de elementos (#noticias, #publicidad, #principal, #secundario) deben tener 0.5em
+de relleno en todos sus lados, salvo el elemento #pie, que sólo debe tener relleno en la
+zona superior e inferior.
+▪ Los elementos .articulo deben mostrar una separación entre ellos de 1em.
+▪ Las imágenes de los artículos muestran un margen de 0.5em en todos sus lados.
+▪ El elemento #publicidad está separado 1em de su elemento superior.
+▪ El elemento #pie debe tener un margen superior de 1em.*/
+#copyright{
+    text-align: right;
 }
-
-.articulo h2 {
-    color: brown;
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 40px;
-    background-color: aliceblue;
-    margin: 5px;
-}
-img{
-    float: left;
-}
-.articulo{
-
-    padding: 5%;
-}
-#publicidad{
-    background-image: url(imagenes/fnoticias.gif);
-    background-repeat: no-repeat;
-}
-#noticias{
-    background-image: url(imagenes/fnoticias.gif);
-    background-repeat: no-repeat;
+#enlaces{
+    text-align: left;
 }
